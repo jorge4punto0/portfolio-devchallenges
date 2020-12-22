@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  margin-top: 100px;
+  background: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.article-card {
+  display: grid;
+  grid-column-gap: 50px;
+  margin: auto;
+  max-width: 1000px;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  grid-template-columns: 1fr 500px;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "article-card__blog           article-card__img"
+    "article-card__title          article-card__img"
+    "article-card__description    article-card__img"
+    "article-card__link           article-card__img";
+}
+
+.article-card__blog {
+  font-size: 16px;
+  color: #828282;
+  margin: 0;
+
+  grid-area: article-card__blog;
+  align-self: flex-start;
+}
+
+.article-card__title {
+  font-size: 24px;
+  color: #4f4f4f;
+  margin: 0;
+
+  grid-area: article-card__title;
+  align-self: center;
+}
+
+.article-card__description {
+  font-size: 16px;
+  color: #828282;
+  margin: 0;
+
+  grid-area: article-card__description;
+}
+
+.article-card__link {
+  font-size: 16px;
+  text-decoration: none;
+
+  grid-area: article-card__link;
+  align-self: flex-end;
+}
+
+.article-card__img {
+  width: 520px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+
+  grid-area: article-card__img;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 932px) {
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 800px) {
+  .article-card {
+    grid-column-gap: 40px;
+    max-width: 500px;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 50px repeat(3, auto);
+    grid-template-areas:
+      "article-card__blog           article-card__img"
+      "article-card__title          article-card__img"
+      "article-card__description    article-card__description"
+      "article-card__link           article-card__link";
+  }
+
+  .article-card__title {
+    align-self: flex-start;
+  }
+
+  .article-card__description {
+    margin: 40px 0;
+    width: auto;
+  }
+
+  .article-card__img {
+    max-width: 270px;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .article-card {
+    max-width: auto;
+  }
+}
