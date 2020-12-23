@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  margin-top: 100px;
+  background: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.skills-card {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.skills-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4f4f4f;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.skills-card__container {
+  display: grid;
+  max-width: 1000px;
+  grid-column-gap: 60px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "skills-card__skill--1    skills-card__skill--4"
+    "skills-card__skill--2    skills-card__skill--5"
+    "skills-card__skill--3    skills-card__skill--6";
+}
+
+.skills-card__skill--1 {
+  grid-area: skills-card__skill--1;
+}
+.skills-card__skill--2 {
+  grid-area: skills-card__skill--2;
+}
+.skills-card__skill--3 {
+  grid-area: skills-card__skill--3;
+}
+.skills-card__skill--4 {
+  grid-area: skills-card__skill--4;
+}
+.skills-card__skill--5 {
+  grid-area: skills-card__skill--5;
+}
+.skills-card__skill--6 {
+  grid-area: skills-card__skill--6;
+}
+
+.skills-card__skill {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.skills-card__tech {
+  font-size: 16px;
+  color: #4f4f4f;
+  margin: 0;
+  width: 25%;
+  min-width: 100px;
+}
+
+.skills-card__scale {
+  width: 75%;
+  height: 8px;
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.skills-card__percent {
+  background: #2f80ed;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.skills-card__percent--1 {
+  width: 40%;
+}
+.skills-card__percent--2 {
+  width: 50%;
+}
+.skills-card__percent--3 {
+  width: 60%;
+}
+.skills-card__percent--4 {
+  width: 70%;
+}
+.skills-card__percent--5 {
+  width: 80%;
+}
+.skills-card__percent--6 {
+  width: 90%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 932px) {
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 800px) {
+  .skills-card {
+    max-width: 400px;
+    min-width: 280px;
+    margin: auto;
+  }
+
+  .skills-card__title {
+    margin-bottom: 20px;
+  }
+
+  .skills-card__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "skills-card__skill--1"
+      "skills-card__skill--2"
+      "skills-card__skill--3"
+      "skills-card__skill--4"
+      "skills-card__skill--5"
+      "skills-card__skill--6";
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .article-card {
+    max-width: auto;
+  }
+}
