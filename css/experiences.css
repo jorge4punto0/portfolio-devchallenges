@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  margin-top: 100px;
+  background: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.experiences-card {
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.experiences-card__title {
+  margin: 0 0 30px 0;
+  color: #4f4f4f;
+}
+
+.experiences-card__my-jobs {
+  display: flex;
+  justify-content: space-between;
+  max-width: auto;
+}
+
+.experiences-card__job {
+  display: grid;
+  max-width: 270px;
+  grid-column-gap: 16px;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "experiences-card__img    experiences-card__date"
+    "experiences-card__img    experiences-card__position"
+    "experiences-card__img    experiences-card__description";
+}
+
+.experiences-card__img {
+  grid-area: experiences-card__img;
+
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.experiences-card__date {
+  grid-area: experiences-card__date;
+
+  font-size: 14px;
+  color: #828282;
+}
+
+.experiences-card__position {
+  grid-area: experiences-card__position;
+
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  color: #333333;
+}
+
+.experiences-card__description {
+  grid-area: experiences-card__description;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #828282;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 932px) {
+  .experiences-card {
+    max-width: 420px;
+  }
+  .experiences-card__my-jobs {
+    display: block;
+  }
+
+  .experiences-card__job {
+    max-width: 420px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .article-card {
+    max-width: auto;
+  }
+}
