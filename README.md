@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # portfolio-devchallenges
 
 Challenge: Create all the elements in the given designs and then create a portfolio with your own content. You can create your own layout. You can use React, Vue.js, or other libraries to create a reusable component, but it is not required.
